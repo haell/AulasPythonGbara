@@ -13,5 +13,10 @@
 
 # Resolvendo o exercicio todo em duas linhas.
 nome = str(input('Digite seu nome completo: '))
-nome1 = nome.split()
-print("""Seu nome com todas as letras em maiúsculo = {}\nSeu nome com todas as letras em minúsculo = {}\nSeu nome tem {} letras (contando os espaços em branco)\nSeu nome tem {} letras (Sem os espaços em branco)\n"Extra": Seu nome tem {} palavras\nSeu primeiro nome tem {} letras""".format(nome.upper(), nome.lower(), len(nome), len(''.join(nome.split())), len(nome.split()), len(nome1[0])))
+print("""Seu nome com todas as letras em maiúsculo = {}
+Seu nome com todas as letras em minúsculo = {}
+Seu nome tem {} letras (contando os espaços em branco)
+Seu nome tem {} letras (Sem os espaços em branco)
+"Extra": Seu nome tem {} palavras
+Seu primeiro nome tem {} letras"""
+      .format(nome.upper(), nome.lower(), len(nome), len(''.join(nome.split())), len(nome.split()), len(nome.split()[0])))
