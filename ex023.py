@@ -9,8 +9,8 @@ while True:
         break
     except ValueError as error:
         print(error)  # Quando substituo por mensagem, o programa quebra.
-num1 = str(num) #convertendo para string
-print('Unidade: {}'.format(num1[3]))
-print('Dezena : {}'.format(num1[2]))
-print('Centena: {}'.format(num1[1]))
-print('Milhar : {}'.format(num1[0]))
+num1 = str(num+10000) #convertendo para string
+print('Unidade: {}'.format(num1[4]))
+print('Dezena : {}'.format(num1[3]))
+print('Centena: {}'.format(num1[2]))
+print('Milhar : {}'.format(num1[1]))
