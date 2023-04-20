@@ -11,7 +11,7 @@ if numero_inteiro < 0:
 else:
     position = 2
 
-def _constroi_print(n):
+def menu(n):
 
     if n == '1':
         print(f'\nO número {numero_inteiro} em binário é: \033[1;32;40m{str(bin(numero_inteiro)[position:])}\033[m\n')
@@ -20,5 +20,4 @@ def _constroi_print(n):
     elif n == '3':
         print(f'\nO número {numero_inteiro} em hexadecimal é: \033[1;35;40m{str(hex(numero_inteiro)[position:])}\033[m\n')
 
-
-_constroi_print(base)
+menu(base)
