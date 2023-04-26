@@ -5,7 +5,7 @@ print('='*30)
 
 primeiro_termo = int(input('Primeiro termo: '))
 razao = int(input('Razão: '))
-
-for c in range(primeiro_termo, 21, razao):
+decimo_termo = primeiro_termo + (10 - 1) * razao
+for c in range(primeiro_termo, decimo_termo + 1, razao):
     print(c,'→ ', end='')
 print(" Acabou!\n")
