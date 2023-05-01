@@ -9,14 +9,19 @@ print("Vou pensar em um número de 0 a 10, tente adivinhar!")
 print('-=-' * 20)
 num_usuario = ''#int(input("Digite um número de 0 a 10: ")) # usuário tenta adivinhar
 num_computador = 0
+mais_numero = 0
+menos_numero = 0
+conte = 0
+num_computador = randint(0, 10) # computador gera um número aleatório entre 0 e 10
 while num_usuario != num_computador:
-    num_computador = randint(1, 10) # computador gera um número aleatório entre 0 e 5
+    conte += 1
     num_usuario = int(input("Digite um número de 0 a 10: ")) # usuário tenta adivinhar
-    print('Pensando...')
-    sleep(2)
-    if num_usuario == num_computador:
-        print("Pensei no {}, você acertou, PARABÉNS!".format(num_computador))
+    print('Pensando...\n')
+    sleep(1)
+    if num_usuario < num_computador:
+        print(f'Mais... Tente outra uma vez!\n')                
+    elif num_usuario > num_computador:
+        print(f'Menos... Tente outra uma vez!\n')                
+    elif num_usuario == num_computador:
+        print("Pensei no {}, você acertou na \033[1m{}ª\033[m tentativa, \033[1;32mPARABÉNS!\033[m\n".format(num_computador, conte))
         break
-    else:
-        print("Pensei no número {}, você errou, TENTE NOVAMENTE!".format(num_computador))
-        
