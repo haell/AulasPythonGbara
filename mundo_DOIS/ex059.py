@@ -52,6 +52,7 @@ while sair == False:
             sleep(1)
             os.system("cls")
             print("\033[1;32mAté a próxima!\033[m")
-            sleep(1)
             jogo = 1
             sair = True
+        else:
+            print(" Opção inválida! ")
