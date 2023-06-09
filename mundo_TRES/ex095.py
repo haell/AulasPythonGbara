@@ -6,8 +6,6 @@
     # Depois vai ler a quantidade de gols feitos em cada partida.
     # No final, tudo isso será guardado em um dicionário, incluindo o total de gols feitos durante o campeonato.
 """
-from rich.table import Table
-
 def fim():
     while True:
         sair = input("Deseja continuar? [S/N]: ").strip().upper() or 'vazio'
@@ -98,8 +96,6 @@ def escolha_jogador(time):
         else:
             print("Valor inválido!")
 
-table = Table()
-
 def main():
     time = list()
 
@@ -120,9 +116,6 @@ def main():
     exibir_jogadores(time)
     escolha_jogador(time)
 
-
-# ##################################### MAIN ####################################################
-
-
+###################################### MAIN ####################################################
 if __name__ == "__main__":
     main()
