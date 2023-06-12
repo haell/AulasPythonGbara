@@ -9,7 +9,6 @@
 from time import sleep
 
 def linha():
-    print()
     print('-='*36)
 
 def contador(inicio, fim, passo):
@@ -19,20 +18,25 @@ def contador(inicio, fim, passo):
     if fim < inicio and passo > 0:
         for n in range(inicio, fim-1, -passo):
             print(n, end=' ', flush=True)
-            #sleep(0.45)
+            sleep(0.45)
     for n in range(inicio, fim+1, passo):
         print(n, end=' ', flush=True)
-        #sleep(0.45)
+        sleep(0.45)
+    print()
     linha()    
-
-contador(1,10,1)
-
-contador(10, 0, -2)
-
-print("Agora é a sua vez de personalizar a contagem: ")
-inicio = int(input("Início: "))
-fim = int(input("Fim: "))
-passo = int(input("Passo: ") or 1) 
     
+def agora_sua_vez():
+    print("Agora é a sua vez de personalizar a contagem: ")
+    inicio = int(input("Início: "))
+    fim = int(input("Fim: "))
+    passo = int(input("Passo: ") or 1)
+    return inicio, fim, passo
 
-contador(inicio, fim, passo)
+if __name__ == '__main__':
+    contador(1,10,1)
+
+    contador(10, 0, -2)
+
+    inicio, fim, passo = agora_sua_vez()
+
+    contador(inicio, fim, passo)
