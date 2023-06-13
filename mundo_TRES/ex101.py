@@ -12,26 +12,26 @@ def calcula_idade(ano=0):
 def get_ano_nasc():
     while True:
         a_n = input("Em que ano você nasceu: ")
-        valido = a_n.isdigit() and len(a_n) == 4 and (1900 <= int(a_n) <= datetime.today().year)
+        valido = a_n.isdigit() and len(a_n) == 4 and (
+            1900 <= int(a_n) <= datetime.today().year)
         if valido:
             return a_n
         print("Valor inválido!")
 
 def voto(idade):
     situacao = ''
-    if idade in range (18, 66):
+    if idade in range(18, 66):
         situacao = 'É obrigatório'
     elif idade < 16:
         situacao = 'Não Vota.'
     elif idade in range(16, 18) or idade in range(66, 106):
-        situacao = 'É opcional'    
+        situacao = 'É opcional'
     else:
         situacao = 'Sabe o que é voto?'
-        
-    print(f"Com {idade} anos: {situacao} ")
+    return f"Com {idade} anos: {situacao}"
 
-if __name__=='__main__':
+if __name__ == '__main__':
 
     linha()
     idade = calcula_idade(get_ano_nasc())
-    voto(idade)
+    print(voto(idade))
