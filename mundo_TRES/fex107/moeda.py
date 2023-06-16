@@ -1,4 +1,4 @@
-def aumentar(preco, taxa):
+def aumentar(preco = 0, taxa = 0):
     """
     Função para aumentar um valor em 1.
 
@@ -12,7 +12,7 @@ def aumentar(preco, taxa):
     return resultado
 
 
-def diminuir(preco, taxa):
+def diminuir(preco = 0, taxa = 0):
     """
     Função para diminuir um valor em 1.
 
@@ -26,7 +26,7 @@ def diminuir(preco, taxa):
     return resultado
 
 
-def dobro(preco):
+def dobro(preco = 0):
     """
     Função para calcular o dobro de um valor.
 
@@ -40,7 +40,7 @@ def dobro(preco):
     return resultado
 
 
-def metade(preco):
+def metade(preco = 0):
     """
     Função para calcular a metade de um valor.
 
@@ -53,3 +53,5 @@ def metade(preco):
     resultado = preco / 2
     return resultado
 
+def moeda(preco = 0, simbolo = 'R$'):
+    return f'{simbolo}{preco: .2f}'.replace('.',',')
